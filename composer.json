@@ -1,0 +1,7 @@
+{
+  "name": "luis/portafolio",
+  "description": "Portafolio de Luis Angel Salgueron",
+  "require": {
+    "phpmailer/phpmailer": "^6.9"
+  }
+}

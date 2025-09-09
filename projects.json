@@ -1,0 +1,74 @@
+[
+  {
+    "title": "CRUD en C# (.NET)",
+    "stack": "C# / .NET",
+    "summary": "CRUD con buenas prácticas (capas) y ADO/EF.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/ScharpCRUD",
+      "demo": ""
+    }
+  },
+  {
+    "title": "Servicios Web en C#",
+    "stack": "C# / .NET Web API",
+    "summary": "Servicios REST para consumo desde front u otras apps.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/cscharpSERVICESWEB",
+      "demo": ""
+    }
+  },
+  {
+    "title": "API Charts",
+    "stack": "C# / .NET",
+    "summary": "API que entrega datos para gráficos y reportes.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/apiCSchart",
+      "demo": ""
+    }
+  },
+  {
+    "title": "CRUD PHP MVC",
+    "stack": "PHP / MySQL",
+    "summary": "CRUD en PHP + MySQL con MVC y vistas limpias.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/CRUD_PHP",
+      "demo": ""
+    }
+  },
+  {
+    "title": "Sistema de Registro",
+    "stack": "PHP / MySQL",
+    "summary": "Registro/login de usuarios con validaciones.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/Sistema_Registro",
+      "demo": ""
+    }
+  },
+  {
+    "title": "CMS sencillo",
+    "stack": "PHP / MySQL",
+    "summary": "Gestión de contenido y roles básicos.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/Sistema-CMS",
+      "demo": ""
+    }
+  },
+  {
+    "title": "Dashboard (JS)",
+    "stack": "JavaScript",
+    "summary": "Panel con tablas y gráficas; consumo de datos.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/Proyecto-Dashboard",
+      "demo": ""
+    }
+  },
+  {
+    "title": "Correo Masivo",
+    "stack": "PHP / SMTP",
+    "summary": "Envío de correos y registro de suscriptores.",
+    "links": {
+      "repo": "https://github.com/LuisAngelSP/CORREO_MASIVO",
+      "demo": ""
+    }
+  }
+]

@@ -1,0 +1,187 @@
+/* Tipografía base */
+*{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+/* Paleta */
+:root{
+  --bg: #0B0F14;            /* fondo principal (negro azulado) */
+  --bg-elev: #121826;       /* tarjetas/paneles */
+  --bg-alt: #101620;        /* secciones alternas */
+  --text: #E6EAF2;          /* texto principal */
+  --muted: #e8ecf1;         /* texto tenue */
+  --line: #1F2937;          /* divisores/bordes */
+  --accent: #22D3EE;        /* cian brillante para acentos */
+  --accent-2: #7C3AED;      /* morado sutil (hover) */
+}
+
+/* Fondo y texto global */
+html,body{background:var(--bg); color:var(--text);}
+html {
+    scroll-behavior: smooth;
+  }
+  .text-accent { color: var(--accent) !important; }
+
+  /* Link activo del navbar */
+.navbar .nav-link.active{
+    color: var(--accent) !important;
+    text-shadow: 0 0 12px rgba(34,211,238,.35);
+  }
+  
+/* Navbar */
+.navbar{
+  background:rgba(10,14,20,.6)!important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.navbar .navbar-brand,
+.navbar .nav-link{ color:var(--text)!important; }
+.navbar .nav-link:hover{ color:var(--accent)!important; }
+.navbar-toggler{ border-color: rgba(255,255,255,.25); }
+.navbar-toggler-icon{ filter: invert(1); }
+
+/* Encabezado con leve gradiente */
+.bg-gradient{
+  background: radial-gradient(1200px 400px at 0% 0%, rgba(34,211,238,.10), transparent 60%),
+              radial-gradient(1200px 400px at 100% 0%, rgba(124,58,237,.10), transparent 60%),
+              linear-gradient(180deg, #0B0F14, #0B0F14);
+}
+
+/* Tarjeta del hero / tarjetas en general */
+.hero-card,
+.card{
+  background: var(--bg-elev)!important;
+  border: 1px solid var(--line);
+  color: var(--text);
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+.card .text-muted,
+.hero-card .text-muted{ color: var(--muted)!important; }
+
+/* Badges */
+.badge.text-bg-dark{
+  background: transparent!important;
+  color: var(--text)!important;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+/* Secciones alternas que usaban .bg-light */
+.bg-light{ background: var(--bg-alt)!important; }
+
+/* Botones */
+.btn-dark{
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #001418;
+}
+.btn-dark:hover{ background: #18bfd6; border-color:#18bfd6; color:#001418; }
+
+.btn-outline-dark{
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-outline-dark:hover{
+  color: #001418; background: var(--accent); border-color: var(--accent);
+}
+
+/* Links “btn-link” del header */
+.btn-link{ color: var(--muted); text-decoration: none; }
+.btn-link:hover{ color: var(--accent); }
+
+/* Hover de cards de proyectos */
+#project-grid .card{ transition: transform .2s ease, box-shadow .2s ease; }
+#project-grid .card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,.5);
+}
+
+/* Divisores y hr */
+hr{ border-color: var(--line); opacity:1; }
+
+/* Footer */
+footer{
+  border-top:1px solid var(--line);
+  color: var(--muted);
+  background: rgba(0,0,0,.2);
+}
+
+/* Formularios */
+.form-control, .form-select, textarea{
+  background: #0f1520; border:1px solid var(--line); color: var(--text);
+}
+.form-control:focus, .form-select:focus, textarea:focus{
+  border-color: var(--accent); box-shadow: 0 0 0 .25rem rgba(34,211,238,.15);
+}
+label.form-label{ color: var(--muted); }
+
+/* Botón pequeño de “Ver JSON” */
+.btn-outline-dark.btn-sm{
+  color: var(--muted); border-color: var(--line);
+}
+.btn-outline-dark.btn-sm:hover{
+  color: #001418; background: var(--accent); border-color: var(--accent);
+}
+
+/* Colores de marca al pasar el mouse */
+footer a:hover { opacity: 1; }
+footer a { opacity:.9; transition:opacity .15s ease, color .15s ease; }
+
+footer a[href*="github.com"]:hover i { color:#ffffff; }
+footer a[href*="linkedin.com"]:hover i { color:#0A66C2; }   /* LinkedIn */
+footer a[href^="mailto:"]:hover i { color:#EA4335; }        /* Gmail-ish */
+/* Foco más visible (teclado) */
+:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  
+  /* Placeholders un poco más tenues (sin perder contraste) */
+  ::placeholder { color: #7b8595; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; }
+  }
+
+  .btn-accent-outline{
+    color: var(--accent);
+    border:1px solid var(--accent);
+    background: transparent;
+  }
+  .btn-accent-outline:hover{
+    color:#001418; background: var(--accent); border-color: var(--accent);
+  }
+
+
+  /* Tarjeta de perfil en el hero */
+.profile-badge{
+  display:flex; align-items:center; gap:18px;
+  padding:16px 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  width:max-content;
+}
+.avatar-xl{
+  width:120px; height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  /* aro sutil en el avatar */
+  box-shadow:
+    0 0 0 3px var(--bg),
+    0 0 0 5px rgba(34,211,238,.35),
+    0 10px 24px rgba(0,0,0,.35);
+}
+.profile-name{ font-weight:800; font-size:1.25rem; letter-spacing:.2px; }
+.profile-role{ color:var(--muted); margin-top:2px; }
+.profile-links{ display:flex; gap:12px; margin-top:8px; }
+.profile-links a{ display:inline-flex; align-items:center; gap:6px; color:var(--muted); text-decoration:none; }
+.profile-links a:hover{ color:var(--accent); }
+
+/* Responsive */
+@media (max-width: 991.98px){
+  .profile-badge{ padding:12px 14px; }
+  .avatar-xl{ width:96px; height:96px; }
+  .profile-name{ font-size:1.1rem; }
+}
+/* Año del footer */
+#year{ color: var(--text); }
